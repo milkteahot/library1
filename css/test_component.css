@@ -1,0 +1,280 @@
+.grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid {
+  margin: 0rem;
+  padding: 0px;
+  text-align: center;
+  border-bottom: 10px solid #794343d1;
+  border-left: 10px solid saddlebrown;
+  border-right: 10px solid saddlebrown;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.grid li {
+  margin: 2rem 1rem 0rem 1rem;
+  box-shadow: 14px 5px 10px hsl(30deg 39% 19% / 94%),
+    4px 6px 4px hsl(27deg 93% 40% / 32%);
+}
+
+.grid li span {
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  color: hsla(0, 0%, 0%, 0.6);
+  transform-style: preserve-3d;
+  perspective: 550px;
+  z-index: 1;
+}
+
+/* :before is pseudo element for dark semi-transparent shadow on top of it */
+/* :after is pseudo element for "peep" or opening piece on top of everything */
+.grid li span:before,
+.grid li span:after {
+  position: absolute;
+  content: attr(data-letter);
+  line-height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.3s;
+  background-color: blue;
+}
+
+.grid li span:before {
+  /* would be inherited */
+  text-shadow: none;
+  color: hsla(0, 0%, 0%, 0.12);
+}
+
+/* left side will become the hinge of the rotation */
+.ot-letter-left span:before,
+.ot-letter-left span:after {
+  transform-origin: 0 50%;
+}
+
+.ot-letter-left span:before {
+  /* transform: scale(1.08, 1) skew(0deg, 1deg); */
+}
+
+.ot-letter-left span:after {
+  /* text-shadow: -1px 0px 0px hsla(360, 100%, 100%, 0.1),
+    3px 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: rotateY(-15deg); */
+  /* box-shadow: 0px 1px 5px hsl(1deg 71% 23% / 92%), 3px 1px 1px hsl(0deg 87% 49% / 40%); */
+  box-shadow: 0px 1px 5px hsl(205deg 71% 23% / 92%),
+    3px 1px 1px hsl(242deg 87% 49% / 40%);
+  transform: rotateY(-5deg);
+}
+
+/* 표지 색깔 */
+
+#span01:after {
+  background-color: #020080;
+}
+
+#span02:after {
+  background-color: #0f34a6;
+}
+
+#span03:after {
+  background-color: rgb(46, 32, 241);
+}
+
+#span04:after {
+  background-color: #007fff;
+}
+
+#span05:after {
+  background-color: #0f52ba;
+}
+
+#span06:after {
+  background-color: rgb(46, 32, 241);
+}
+
+.ot-letter-left:hover span::before {
+  /* transform: scale(0.85, 1) skew(0deg, 20deg); */
+}
+
+.ot-letter-left:hover span::after {
+  transform: rotateY(-40deg);
+}
+
+.ot-letter-left {
+  /* background: #e74d3c; */
+  background: #2226cccf;
+}
+
+.ot-letter-left span {
+  text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3),
+    1px 4px 6px #e74d3c;
+}
+
+.ot-letter-left span:after {
+  color: #e74d3c;
+}
+
+.ot-letter-left:hover span:after {
+  color: #ea6253;
+}
+
+.span-div {
+    width: 12vw;
+    height: 16vw;
+}
+
+/* div */
+.grid li {
+  display: inline-block;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  color: hsla(0, 0%, 0%, 0.6);
+  transform-style: preserve-3d;
+  perspective: 550px;
+  z-index: 1;
+}
+
+/* :before is pseudo element for dark semi-transparent shadow on top of it */
+/* :after is pseudo element for "peep" or opening piece on top of everything */
+.grid li div:before,
+.grid li div:after {
+  position: absolute;
+  content: attr(data-letter);
+  line-height: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.3s;
+  /* 표지 투명하게 */
+  opacity: 0;
+}
+
+.grid li div:before {
+  /* would be inherited */
+  text-shadow: none;
+  color: hsla(0, 0%, 0%, 0.12);
+}
+
+/* left side will become the hinge of the rotation */
+.ot-letter-left div:before,
+.ot-letter-left div:after {
+  transform-origin: 0 50%;
+  background-color: blue;
+}
+
+.ot-letter-left div:before {
+  /* transform: scale(1.08, 1) skew(0deg, 1deg); */
+}
+
+.ot-letter-left div:after {
+  text-shadow: -1px 0px 0px hsla(360, 100%, 100%, 0.1),
+    3px 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: rotateY(-10deg);
+  background-color: blue;
+  opacity: 1;
+}
+
+.ot-letter-left:hover div::before {
+  transform: scale(0.85, 1) skew(0deg, 20deg);
+}
+
+.ot-letter-left:hover div::after {
+  transform: rotateY(-40deg);
+}
+
+/* 내부 색깔 */
+.ot-letter-left:nth-child(1) {
+  background: #111e6c;
+}
+
+.ot-letter-left:nth-child(2) {
+  background: #1d2a51;
+}
+
+.ot-letter-left:nth-child(3) {
+  background: #003152;
+}
+
+.ot-letter-left:nth-child(4) {
+  background: #020080;
+}
+
+.ot-letter-left:nth-child(5) {
+  background: #0d4d91;
+}
+
+.ot-letter-left:nth-child(6) {
+  background: #0f34a6;
+}
+
+.ot-letter-left:nth-child(7) {
+  background: #007fff;
+}
+
+.ot-letter-left:nth-child(8) {
+  background: #0f52ba;
+}
+
+.ot-letter-left:nth-child(9) {
+  background: #008ecc;
+}
+
+.ot-letter-left:nth-child(10) {
+  background: #003152;
+}
+
+.ot-letter-left div {
+  text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3),
+    1px 4px 6px #e74d3c;
+}
+
+.ot-letter-left div:after {
+  color: #e74d3c;
+}
+
+.ot-letter-left:hover div:after {
+  color: #ea6253;
+}
+
+p {
+    color:rgb(255, 255, 255);
+    font-size:6em;
+    text-align:center;
+    animation: neonGlow 2s infinite alternate;
+  }
+  
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 10px rgba(255,255,255,.8),
+                   0 0 20px rgba(255,255,255,.8),
+                   0 0 22px  rgba(255,255,255,.8),
+                   0 0 40px  rgba(66,220,219,.8),
+                   0 0 60px  rgba(66,220,219,.8),
+                   0 0 80px  rgba(66,220,219,.5),
+                   0 0 100px rgba(66,220,219,.5),
+                   0 0 140px rgba(66,220,219,.5),
+                   0 0 200px rgba(66,220,219,.5);
+    }
+    100% {
+      text-shadow: 0 0 2px rgba(255,255,255,.8),
+                   0 0 8px rgba(255,255,255,.8),
+                   0 0 10px rgba(255,255,255,.8),
+                   0 0 20px rgba(66,220,219,.8),
+                   0 0 30px rgba(66,220,219,.8),
+                   0 0 40px rgba(66,220,219,.8),
+                   0 0 50px rgba(66,220,219,.5),
+                   0 0 80px rgba(66,220,219,.5);
+    }
+  }
+  

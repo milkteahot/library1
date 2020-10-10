@@ -1,7 +1,7 @@
 .grid-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .grid {
@@ -113,9 +113,12 @@
   background: #2226cccf;
 }
 
+/* 표지 제목 */
 .ot-letter-left span {
-  text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3),
-    1px 4px 6px #e74d3c;
+  text-align: center;
+  align-content: center;
+  /* text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3),
+    1px 4px 6px #e74d3c; */
 }
 
 .ot-letter-left span:after {
@@ -127,8 +130,8 @@
 }
 
 .span-div {
-    width: 12vw;
-    height: 16vw;
+  width: 12vw;
+  height: 16vw;
 }
 
 /* div */
@@ -248,33 +251,30 @@
 }
 
 p {
-    color:rgb(255, 255, 255);
-    font-size:6em;
-    text-align:center;
-    animation: neonGlow 2s infinite alternate;
+  color: rgb(255, 255, 255);
+  font-size: 6em;
+  text-align: center;
+  animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8),
+      0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5),
+      0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
   }
-  
-  @keyframes neonGlow {
-    0% {
-      text-shadow: 0 0 10px rgba(255,255,255,.8),
-                   0 0 20px rgba(255,255,255,.8),
-                   0 0 22px  rgba(255,255,255,.8),
-                   0 0 40px  rgba(66,220,219,.8),
-                   0 0 60px  rgba(66,220,219,.8),
-                   0 0 80px  rgba(66,220,219,.5),
-                   0 0 100px rgba(66,220,219,.5),
-                   0 0 140px rgba(66,220,219,.5),
-                   0 0 200px rgba(66,220,219,.5);
-    }
-    100% {
-      text-shadow: 0 0 2px rgba(255,255,255,.8),
-                   0 0 8px rgba(255,255,255,.8),
-                   0 0 10px rgba(255,255,255,.8),
-                   0 0 20px rgba(66,220,219,.8),
-                   0 0 30px rgba(66,220,219,.8),
-                   0 0 40px rgba(66,220,219,.8),
-                   0 0 50px rgba(66,220,219,.5),
-                   0 0 80px rgba(66,220,219,.5);
-    }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
+      0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8),
+      0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5),
+      0 0 80px rgba(66, 220, 219, 0.5);
   }
-  
+}
+
+.ot-letter-left { background: #e74d3c; }
+/* .ot-letter-left span { text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 4px 6px #e74d3c; } */
+.ot-letter-left span:after { color: #e74d3c; }
+.ot-letter-left:hover span:after { color: #ea6253; }

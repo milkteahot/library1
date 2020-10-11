@@ -1,3 +1,93 @@
+header {
+  position: fixed;
+  width: 97vw;
+  top: 0;
+  padding: 0;
+  z-index: 80;
+  background-color: #fff;
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+body {
+  font-family: Gothic; 
+}
+
+header ul {
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+}
+
+header ul li {
+  list-style: none;
+  margin: 1rem;
+}
+
+ul a {
+  color: #999;
+  text-decoration: none;
+}
+
+.title {
+  display: block;
+  float: right;
+  max-width: 35%;
+  align-self: center;
+  font-size: 1rem;
+}
+
+header h1 {
+  display: inline-block;
+  color: #2e2e2e;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1em;
+  letter-spacing: 0px;
+  text-transform: none;
+  font-size: 25px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.2em;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  text-align: right;
+}
+
+.title a {
+  color: #2e2e2e;
+  border-bottom: none;
+}
+
+.title-span {
+  color: #2e2e2e;
+  font-size: 1rem;
+}
+
+.main-title {
+  margin-top: 11%;
+  text-align: center;
+  font-family: Gothic;
+  font-weight: 800; 
+  color: #3c3a3ade;
+}
+
+.intro {
+  margin: 1rem;
+  border: none;
+  /* box-shadow: 4px 4px 5px hsl(30deg 97% 70% / 52%), 0px 1px 1px hsl(27deg 47% 20% / 35%); */
+  padding: 1rem;
+  text-align: center;
+    color: #b9b7b4;
+}
+
 .grid-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -8,9 +98,9 @@
   margin: 0rem;
   padding: 0px;
   text-align: center;
-  border-bottom: 10px solid #794343d1;
-  border-left: 10px solid saddlebrown;
-  border-right: 10px solid saddlebrown;
+  border-bottom: 10px solid #b38585d1;
+    border-left: 10px solid #bf9477;
+    border-right: 10px solid #fbe3d2;
   justify-content: space-evenly;
   display: flex;
 }
@@ -46,6 +136,8 @@
   z-index: 2;
   transition: all 0.3s;
   background-color: blue;
+  text-align: justify;
+  padding: 1em;
 }
 
 .grid li span:before {
@@ -100,6 +192,30 @@
   background-color: rgb(46, 32, 241);
 }
 
+#span07:after {
+  background-color: #ff8aa0;
+}
+
+#span08:after {
+  background-color: #ffa8b5;
+}
+
+#span09:after {
+  background-color: #ffcccb;
+}
+
+#span10:after {
+  background-color: #ffdcd1;
+}
+
+#span11:after {
+  background-color: #ff8786;
+}
+
+#span12:after {
+  background-color: #ff6862;
+}
+
 .ot-letter-left:hover span::before {
   /* transform: scale(0.85, 1) skew(0deg, 20deg); */
 }
@@ -116,7 +232,6 @@
 /* 표지 제목 */
 .ot-letter-left span {
   text-align: center;
-  align-content: center;
   /* text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3),
     1px 4px 6px #e74d3c; */
 }
@@ -250,6 +365,7 @@
   color: #ea6253;
 }
 
+/*  
 p {
   color: rgb(255, 255, 255);
   font-size: 6em;
@@ -273,8 +389,14 @@ p {
       0 0 80px rgba(66, 220, 219, 0.5);
   }
 }
-
-.ot-letter-left { background: #e74d3c; }
+*/
+.ot-letter-left {
+  background: #e74d3c;
+}
 /* .ot-letter-left span { text-shadow: 1px 4px 6px #e74d3c, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 4px 6px #e74d3c; } */
-.ot-letter-left span:after { color: #e74d3c; }
-.ot-letter-left:hover span:after { color: #ea6253; }
+.ot-letter-left span:after {
+  color: #e74d3c;
+}
+.ot-letter-left:hover span:after {
+  color: #ea6253;
+}

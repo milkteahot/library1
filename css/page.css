@@ -137,3 +137,7 @@ span {
     transition: opacity .1s;
     opacity: 1;
 }
+
+.a {
+  text-indent: 1em;
+}
